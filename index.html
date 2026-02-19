@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эко-магазин GreenLife</title>
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+  <style>
+    body {
+      padding-top: 3.25rem;
+    }
+
+    .hero {
+      background: url("assets/images/hero.jpg") center / cover no-repeat;
+    }
+
+    .hero .title,
+    .hero .subtitle {
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .about-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .benefit-image {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-bold">
+      🌱 GreenLife
+    </a>
+
+    <!-- Кнопка для мобильного меню -->
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="#about">О магазине</a>
+      <a class="navbar-item" href="#benefits">Преимущества</a>
+      <a class="navbar-item" href="#catalog">Каталог</a>
+      <a class="navbar-item" href="contacts.html">Контакты</a>
+      <a class="navbar-item" href="faq.html">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Скрипт для работы бургера на мобильных -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    burgers.forEach( burger => {
+      burger.addEventListener('click', () => {
+        const target = document.getElementById(burger.dataset.target);
+        burger.classList.toggle('is-active');
+        target.classList.toggle('is-active');
+      });
+    });
+  });
+</script>
+
+<!-- HERO -->
+<section class="hero is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">Экологичные товары для осознанной жизни</h1>
+      <h2 class="subtitle is-4">Без пластика. Без вреда. С заботой о планете.</h2>
+      <a class="button is-large is-success">Купить сейчас</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <h2 class="title">О проекте</h2>
+        <p>
+          GreenLife — эко-магазин товаров для осознанного потребления и заботы о природе.
+        </p>
+      </div>
+      <div class="column">
+        <img src="assets/images/about.jpg"
+             alt="Экологичный образ жизни"
+             class="about-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" id="benefits">
+  <div class="container">
+    <h2 class="title has-text-centered">Почему выбирают нас</h2>
+
+    <div class="columns">
+      <div class="column">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <img src="assets/images/Eco-friendly.jpg" class="benefit-image" alt="Eco friendly">
+            <p class="title is-3">Eco-friendly</p>
+            <p>Экологичные материалы</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <img src="assets/images/care_of_nature.jpg" class="benefit-image" alt="Минимум отходов">
+            <p class="title is-3">Забота о природе</p>
+            <p>Минимум отходов</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <img src="assets/images/fast.jpg" class="benefit-image" alt="Доставка">
+            <p class="title is-3">Быстрая доставка</p>
+            <p>По всей стране</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="section" id="catalog">
+  <div class="container">
+    <h2 class="title has-text-centered">Популярные товары</h2>
+
+    <div class="columns">
+    
+      <div class="column">
+        <a href="404.html">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/bag.jpg" class="product-image" alt="Эко-сумка">
+          </div>
+          <div class="card-content">
+            <p class="title is-5">Эко-сумка</p>
+            <p>Из хлопка</p>
+          </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+            <a href="404.html">
+            <div class="card-image">
+                <img src="assets/images/toothbrush.jpg" class="product-image" alt="Бамбуковая щётка">
+            </div>
+            <div class="card-content">
+                <p class="title is-5">Бамбуковая щётка</p>
+                <p>Без пластика</p>
+            </div>
+            </a>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+            <a href="404.html">
+            <div class="card-image">
+                <img src="assets/images/bottle.jpg" class="product-image" alt="Эко-бутылка">
+            </div>
+            <div class="card-content">
+                <p class="title is-5">Эко-бутылка</p>
+                <p>Многоразовая</p>
+            </div>
+            </a>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+
+      <!-- Контакты -->
+        <div class="column">
+            <p class="title is-6">Контакты</p>
+            <p>Email: <a href="mailto:eco@greenlife.ru">eco@greenlife.ru</a></p>
+            <p>Телефон: +7 (900) 123-45-67</p>
+        </div>
+
+      <!-- Социальные сети -->
+        <!-- СОЦСЕТИ -->
+        <div class="column has-text-centered social-links">
+            <p class="title is-6">Мы в соцсетях</p>
+            <a href="https://www.facebook.com/login/?locale=ru_RU"><img src="assets/images/facebook.png" alt="Facebook" width="24"></a>
+            <a href="https://www.instagram.com"><img src="assets/images/instagram.png" alt="Instagram" width="24"></a>
+            <a href="https://web.telegram.org/k/"><img src="assets/images/telegram.png" alt="Telegram" width="24"></a>
+        </div>
+
+        <style>
+        /* Расстояние между иконками соцсетей */
+        .social-links a + a {
+            margin-left: 20px;
+        }
+        </style>
+
+    <div class="has-text-centered" style="margin-top: 20px;">
+      <p>© 2025 GreenLife. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

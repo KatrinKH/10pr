@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | GreenLife</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="navbar is-fixed-top is-light">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-bold" href="index.html">🌱 GreenLife</a>
+    <a role="button" class="navbar-burger" data-target="navbarBasic">
+      <span></span><span></span><span></span>
+    </a>
+  </div>
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="index.html#about">О магазине</a>
+      <a class="navbar-item" href="index.html#benefits">Преимущества</a>
+      <a class="navbar-item" href="index.html#catalog">Каталог</a>
+      <a class="navbar-item" href="contacts.html">Контакты</a>
+      <a class="navbar-item is-active" href="faq.html">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  burgers.forEach(burger => {
+    burger.addEventListener('click', () => {
+      const target = document.getElementById(burger.dataset.target);
+      burger.classList.toggle('is-active');
+      target.classList.toggle('is-active');
+    });
+  });
+});
+</script>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2">Оставьте отзыв</h2>
+    <div class="columns">
+      <!-- Форма -->
+      <div class="column is-6">
+        <form id="feedbackForm">
+          <div class="field">
+            <label class="label">Имя</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Ваше имя" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="example@email.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Тема</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select required>
+                  <option value="" disabled selected>Выберите тему</option>
+                  <option>Предложение</option>
+                  <option>Жалоба</option>
+                  <option>Вопрос</option>
+                  <option>Благодарность</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Сообщение</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" required>
+                Соглашаюсь на обработку персональных данных
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">Отправить отзыв</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Контакты -->
+      <div class="column is-6">
+        <div class="content">
+          <h3 class="title is-4">Контакты</h3>
+          <p>📍 Москва, ул. Примерная, 123</p>
+          <p>📞 +7 (900) 123-45-67</p>
+          <p>✉ eco@greenlife.ru</p>
+          <p>Соцсети: 
+            <a href="#">Facebook</a>, 
+            <a href="#">Instagram</a>, 
+            <a href="#">Telegram</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+
+      <!-- Контакты -->
+        <div class="column">
+            <p class="title is-6">Контакты</p>
+            <p>Email: <a href="mailto:eco@greenlife.ru">eco@greenlife.ru</a></p>
+            <p>Телефон: +7 (900) 123-45-67</p>
+        </div>
+
+      <!-- Социальные сети -->
+        <!-- СОЦСЕТИ -->
+        <div class="column has-text-centered social-links">
+            <p class="title is-6">Мы в соцсетях</p>
+            <a href="#"><img src="assets/images/facebook.png" alt="Facebook" width="24"></a>
+            <a href="#"><img src="assets/images/instagram.png" alt="Instagram" width="24"></a>
+            <a href="#"><img src="assets/images/telegram.png" alt="Telegram" width="24"></a>
+        </div>
+
+        <style>
+        /* Расстояние между иконками соцсетей */
+        .social-links a + a {
+            margin-left: 20px;
+        }
+        </style>
+
+    <div class="has-text-centered" style="margin-top: 20px;">
+      <p>© 2025 GreenLife. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

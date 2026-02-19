@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Часто задаваемые вопросы | GreenLife</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <style>
+    body {
+      padding-top: 3.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex: 1;
+    }
+    .faq-header {
+      background: linear-gradient(135deg, #48c774 0%, #23d160 100%);
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+    .accordion-item {
+      margin-bottom: 0.75rem;
+      border: 1px solid #dbdbdb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .accordion-header {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    .accordion-header:hover {
+      background-color: #e8e8e8;
+    }
+    .accordion-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #363636;
+    }
+    .accordion-icon {
+      transition: transform 0.3s;
+    }
+    .accordion-icon.is-active {
+      transform: rotate(180deg);
+    }
+    .accordion-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .accordion-content.is-active {
+      padding: 1rem;
+      max-height: 500px;
+    }
+    .back-button {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-bold" href="index.html">
+      🌱 GreenLife
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="index.html#about">О магазине</a>
+      <a class="navbar-item" href="index.html#benefits">Преимущества</a>
+      <a class="navbar-item" href="index.html#catalog">Каталог</a>
+      <a class="navbar-item" href="contacts.html">Контакты</a>
+      <a class="navbar-item is-active" href="faq.html">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<div class="main-content">
+  <!-- Заголовок FAQ -->
+  <section class="faq-header">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered">Часто задаваемые вопросы</h1>
+      <p class="subtitle is-4 has-text-centered">Найдите ответы на популярные вопросы о наших экотоварах</p>
+    </div>
+  </section>
+
+  <!-- Аккордеон FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="accordion">
+            
+            <!-- Вопрос 1 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq1">
+                <h3>Как начать экологичный образ жизни с GreenLife?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq1" class="accordion-content">
+                <p>Начните с малого! Рекомендуем начать с замены одноразовых предметов на многоразовые: 
+                эко-сумки вместо пластиковых пакетов, бамбуковые зубные щётки вместо пластиковых, 
+                многоразовые бутылки для воды. На нашем сайте вы найдёте все необходимое для первого шага 
+                к осознанному потреблению.</p>
+              </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq2">
+                <h3>Из каких материалов сделаны ваши товары?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq2" class="accordion-content">
+                <p>Мы используем только натуральные и биоразлагаемые материалы: органический хлопок, 
+                бамбук, пробку, древесину FSC-сертифицированных лесов, переработанную бумагу и картон. 
+                Все материалы имеют сертификаты экологичности и безопасности.</p>
+              </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq3">
+                <h3>Как осуществляется доставка и упаковка заказов?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq3" class="accordion-content">
+                <p>Мы используем экологичную упаковку: картонные коробки без пластиковых элементов, 
+                бумажный скотч, крафтовую бумагу вместо пузырчатой плёнки. Доставка осуществляется 
+                по всей России транспортными компаниями. В крупных городах доступна курьерская доставка 
+                на электротранспорте.</p>
+              </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq4">
+                <h3>Можно ли вернуть товар?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq4" class="accordion-content">
+                <p>Да, согласно законодательству РФ, вы можете вернуть товар в течение 14 дней с момента 
+                получения, если он не был в употреблении и сохранены все ярлыки и упаковка. 
+                Экотовары надлежащего качества, не подошедшие по размеру, фасону или расцветке, 
+                также принимаются обратно.</p>
+              </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq5">
+                <h3>Есть ли скидки при оптовых заказах?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq5" class="accordion-content">
+                <p>Да, для юридических лиц, образовательных учреждений и эко-активистов мы предоставляем 
+                специальные оптовые цены. При заказе от 10 единиц одного товара - скидка 10%, от 50 единиц - 15%. 
+                Для постоянных партнёров действуют индивидуальные условия сотрудничества.</p>
+              </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="accordion-item">
+              <div class="accordion-header" data-target="faq6">
+                <h3>Как утилизировать товары после использования?</h3>
+                <span class="icon accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <div id="faq6" class="accordion-content">
+                <p>Большинство наших товаров биоразлагаемы и могут быть компостированы. 
+                Бамбуковые изделия разлагаются за 2-3 года, хлопковые ткани - за 1-5 месяцев. 
+                На каждом товаре есть маркировка с инструкцией по утилизации. 
+                Также мы принимаем некоторые товары на переработку в наших пунктах приёма.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Кнопка возврата -->
+          <div class="has-text-centered back-button">
+            <a href="index.html" class="button is-success is-medium">
+              <span class="icon">
+                <i class="fas fa-arrow-left"></i>
+              </span>
+              <span>Вернуться на главную</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+
+      <!-- Контакты -->
+        <div class="column">
+            <p class="title is-6">Контакты</p>
+            <p>Email: <a href="mailto:eco@greenlife.ru">eco@greenlife.ru</a></p>
+            <p>Телефон: +7 (900) 123-45-67</p>
+        </div>
+
+      <!-- Социальные сети -->
+        <!-- СОЦСЕТИ -->
+        <div class="column has-text-centered social-links">
+            <p class="title is-6">Мы в соцсетях</p>
+            <a href="#"><img src="assets/images/facebook.png" alt="Facebook" width="24"></a>
+            <a href="#"><img src="assets/images/instagram.png" alt="Instagram" width="24"></a>
+            <a href="#"><img src="assets/images/telegram.png" alt="Telegram" width="24"></a>
+        </div>
+
+        <style>
+        /* Расстояние между иконками соцсетей */
+        .social-links a + a {
+            margin-left: 20px;
+        }
+        </style>
+
+    <div class="has-text-centered" style="margin-top: 20px;">
+      <p>© 2025 GreenLife. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+  // Скрипт для аккордеона
+  document.addEventListener('DOMContentLoaded', () => {
+    // Бургер-меню
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    burgers.forEach(burger => {
+      burger.addEventListener('click', () => {
+        const target = document.getElementById(burger.dataset.target);
+        burger.classList.toggle('is-active');
+        target.classList.toggle('is-active');
+      });
+    });
+
+    // Аккордеон
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const targetId = header.getAttribute('data-target');
+        const content = document.getElementById(targetId);
+        const icon = header.querySelector('.accordion-icon');
+        
+        // Закрываем все открытые элементы
+        document.querySelectorAll('.accordion-content.is-active').forEach(activeContent => {
+          if (activeContent.id !== targetId) {
+            activeContent.classList.remove('is-active');
+            activeContent.previousElementSibling.querySelector('.accordion-icon').classList.remove('is-active');
+          }
+        });
+        
+        // Переключаем текущий элемент
+        content.classList.toggle('is-active');
+        icon.classList.toggle('is-active');
+      });
+    });
+
+    // Открываем первый вопрос по умолчанию
+    const firstHeader = document.querySelector('.accordion-header');
+    if (firstHeader) {
+      const firstTarget = firstHeader.getAttribute('data-target');
+      const firstContent = document.getElementById(firstTarget);
+      const firstIcon = firstHeader.querySelector('.accordion-icon');
+      
+      firstContent.classList.add('is-active');
+      firstIcon.classList.add('is-active');
+    }
+  });
+</script>
+
+</body>
+</html>

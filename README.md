@@ -7,7 +7,7 @@
 
 <div align="center">
 
-### 🌐 **[Открыть на GitHub Pages](https://katrinkh.github.io/7-8pr/)**
+### 🌐 **[Открыть на GitHub Pages](https://katrinkh.github.io/10pr/)**
 
 </div>
 

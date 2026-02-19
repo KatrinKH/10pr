@@ -7,6 +7,8 @@
 
   <!-- Bulma -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <!-- Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <style>
     body {
@@ -41,6 +43,44 @@
       height: 60px;
       object-fit: cover;
     }
+    
+    /* Стили для формы */
+    .feedback-form {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e9f0e9 100%);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feedback-form .title {
+      color: #2c5f2d;
+      margin-bottom: 30px;
+    }
+    
+    .is-danger {
+      border-color: #f14668 !important;
+    }
+    
+    .help.is-danger {
+      color: #f14668;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+    
+    .notification {
+      animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -65,8 +105,7 @@
       <a class="navbar-item" href="#about">О магазине</a>
       <a class="navbar-item" href="#benefits">Преимущества</a>
       <a class="navbar-item" href="#catalog">Каталог</a>
-      <a class="navbar-item" href="contacts.html">Контакты</a>
-      <a class="navbar-item" href="faq.html">FAQ</a>
+      <a class="navbar-item" href="#feedback">Обратная связь</a>
     </div>
   </div>
 </nav>
@@ -104,6 +143,8 @@
         <h2 class="title">О проекте</h2>
         <p>
           GreenLife — эко-магазин товаров для осознанного потребления и заботы о природе.
+          Мы предлагаем только качественные и экологичные товары, которые помогают 
+          сократить использование пластика и сохранить нашу планету чистой.
         </p>
       </div>
       <div class="column">
@@ -160,48 +201,136 @@
     <h2 class="title has-text-centered">Популярные товары</h2>
 
     <div class="columns">
-    
       <div class="column">
         <a href="404.html">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/bag.jpg" class="product-image" alt="Эко-сумка">
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Эко-сумка</p>
+              <p>Из хлопка</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
         <div class="card">
-          <div class="card-image">
-            <img src="assets/images/bag.jpg" class="product-image" alt="Эко-сумка">
-          </div>
-          <div class="card-content">
-            <p class="title is-5">Эко-сумка</p>
-            <p>Из хлопка</p>
-          </div>
+          <a href="404.html">
+            <div class="card-image">
+              <img src="assets/images/toothbrush.jpg" class="product-image" alt="Бамбуковая щётка">
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Бамбуковая щётка</p>
+              <p>Без пластика</p>
+            </div>
           </a>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
-            <a href="404.html">
+          <a href="404.html">
             <div class="card-image">
-                <img src="assets/images/toothbrush.jpg" class="product-image" alt="Бамбуковая щётка">
+              <img src="assets/images/bottle.jpg" class="product-image" alt="Эко-бутылка">
             </div>
             <div class="card-content">
-                <p class="title is-5">Бамбуковая щётка</p>
-                <p>Без пластика</p>
+              <p class="title is-5">Эко-бутылка</p>
+              <p>Многоразовая</p>
             </div>
-            </a>
+          </a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="column">
-        <div class="card">
-            <a href="404.html">
-            <div class="card-image">
-                <img src="assets/images/bottle.jpg" class="product-image" alt="Эко-бутылка">
+<!-- FEEDBACK FORM SECTION -->
+<section class="section" id="feedback">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="feedback-form">
+          <h2 class="title has-text-centered">Связаться с нами</h2>
+          <p class="subtitle has-text-centered">Оставьте ваши контакты, и мы ответим на все вопросы</p>
+          
+          <form id="feedbackForm">
+            <!-- Поле ФИО -->
+            <div class="field">
+              <label class="label">ФИО <span class="has-text-danger">*</span></label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <p class="help" id="fullnameHelp">Введите фамилию, имя и отчество</p>
             </div>
-            <div class="card-content">
-                <p class="title is-5">Эко-бутылка</p>
-                <p>Многоразовая</p>
+
+            <!-- Поле Телефон -->
+            <div class="field">
+              <label class="label">Телефон <span class="has-text-danger">*</span></label>
+              <div class="control has-icons-left">
+                <input class="input" type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </div>
+              <p class="help" id="phoneHelp">Формат: +7 (XXX) XXX-XX-XX</p>
             </div>
-            </a>
+
+            <!-- Поле Email -->
+            <div class="field">
+              <label class="label">Email <span class="has-text-danger">*</span></label>
+              <div class="control has-icons-left">
+                <input class="input" type="email" id="email" placeholder="example@mail.ru">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <p class="help" id="emailHelp">Введите корректный email адрес</p>
+            </div>
+
+            <!-- Поле Сообщение -->
+            <div class="field">
+              <label class="label">Сообщение</label>
+              <div class="control">
+                <textarea class="textarea" id="message" placeholder="Ваш вопрос или пожелание..."></textarea>
+              </div>
+              <p class="help" id="messageHelp">До 500 символов</p>
+            </div>
+
+            <!-- Согласие на обработку данных -->
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox" id="agreement" required>
+                  Я согласен на обработку персональных данных
+                  <span class="has-text-danger">*</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Кнопки -->
+            <div class="field is-grouped is-grouped-centered">
+              <div class="control">
+                <button type="submit" class="button is-success">
+                  <span class="icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </span>
+                  <span>Отправить</span>
+                </button>
+              </div>
+              <div class="control">
+                <button type="reset" class="button is-light">
+                  <span>Очистить</span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -209,35 +338,38 @@
 <footer class="footer">
   <div class="container">
     <div class="columns">
-
       <!-- Контакты -->
-        <div class="column">
-            <p class="title is-6">Контакты</p>
-            <p>Email: <a href="mailto:eco@greenlife.ru">eco@greenlife.ru</a></p>
-            <p>Телефон: +7 (900) 123-45-67</p>
-        </div>
+      <div class="column">
+        <p class="title is-6">Контакты</p>
+        <p>Email: <a href="mailto:eco@greenlife.ru">eco@greenlife.ru</a></p>
+        <p>Телефон: +7 (900) 123-45-67</p>
+      </div>
 
       <!-- Социальные сети -->
-        <!-- СОЦСЕТИ -->
-        <div class="column has-text-centered social-links">
-            <p class="title is-6">Мы в соцсетях</p>
-            <a href="https://www.facebook.com/login/?locale=ru_RU"><img src="assets/images/facebook.png" alt="Facebook" width="24"></a>
-            <a href="https://www.instagram.com"><img src="assets/images/instagram.png" alt="Instagram" width="24"></a>
-            <a href="https://web.telegram.org/k/"><img src="assets/images/telegram.png" alt="Telegram" width="24"></a>
-        </div>
-
-        <style>
-        /* Расстояние между иконками соцсетей */
-        .social-links a + a {
-            margin-left: 20px;
-        }
-        </style>
-
+      <div class="column has-text-centered social-links">
+        <p class="title is-6">Мы в соцсетях</p>
+        <a href="https://www.facebook.com/login/?locale=ru_RU"><img src="assets/images/facebook.png" alt="Facebook" width="24"></a>
+        <a href="https://www.instagram.com"><img src="assets/images/instagram.png" alt="Instagram" width="24"></a>
+        <a href="https://web.telegram.org/k/"><img src="assets/images/telegram.png" alt="Telegram" width="24"></a>
+      </div>
+    </div>
+    
     <div class="has-text-centered" style="margin-top: 20px;">
       <p>© 2025 GreenLife. Все права защищены.</p>
     </div>
   </div>
 </footer>
+
+<!-- Подключение скриптов валидации -->
+<script src="scripts/validation.js"></script>
+<script src="scripts/consoleLogger.js"></script>
+
+<style>
+  /* Расстояние между иконками соцсетей */
+  .social-links a + a {
+    margin-left: 20px;
+  }
+</style>
 
 </body>
 </html>

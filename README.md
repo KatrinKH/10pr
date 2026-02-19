@@ -16,9 +16,13 @@
 ```
 GreenLife/
 ├── assets/
+│   ├── for_readme/
 │   ├── images/
 │   └── styles/
 │           └── styles.css
+├── scripts/
+│   ├── consoleLogger.js
+│   └── validation.js
 ├── 404.html
 ├── contacts.html
 ├── faq.html
@@ -30,12 +34,17 @@ GreenLife/
 
 <div align="center">
 
-![*(Начало)*](assets/images/start.png)
-![*(2 страница)*](assets/images/2next.png)
-![*(3 страница)*](assets/images/3page.png)
+![*(Начало)*](assets/for_readme/start.png)
+![*(2 страница)*](assets/for_readme/2next.png)
+![*(3 страница)*](assets/for_readme/3page.png)
 
 ## 📚 Практическое занятие 8: Работа с CSS-фреймворками 2
-![*(Ошибка)*](assets/images/404.png)
-![*(Контакты)*](assets/images/Contact.png)
-![*(Вопросы)*](assets/images/FAQ.png)
+![*(Ошибка)*](assets/for_readme/404.png)
+![*(Контакты)*](assets/for_readme/Contact.png)
+![*(Вопросы)*](assets/for_readme/FAQ.png)
+
+## 📚 Практическое занятие 10: Валидация форм и работа с событиями
+![*(Форма для связи)*](assets/for_readme/questions.png)
 </div>
+
+
